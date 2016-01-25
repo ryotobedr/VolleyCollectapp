@@ -1,47 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1">
-
-    <TableLayout
+    android:layout_height="match_parent">
+    <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.17">
+        android:id="@+id/Buttun"
+        android:weightSum="1">
 
-        <TableRow
-            android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="追加"
+            android:id="@+id/addPlayer"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="false" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="33dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" 番号"
-                android:id="@+id/Number"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:layout_rowSpan="2"
-                android:textSize="20dp" />
+        <EditText
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="背番号入力"
+            android:ems="10"
+            android:id="@+id/NumberInput"
+            android:layout_weight="0.06" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="33dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="　選手名　"
-                android:id="@+id/Name"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_rowSpan="2"
-                android:textSize="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="削除"
+            android:id="@+id/deletePlayer"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/addPlayer" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="選手登録"
+            android:id="@+id/PlayerTouroku" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="セット" />
+
+    </TableRow>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Buttun">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView3"
+            android:layout_alignParentEnd="false">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/data_sheet">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000000" >
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" 背番号 "
+                            android:id="@+id/UniformNumber"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="     選手名     "
+                            android:id="@+id/PlayerName"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:columnCount="4"
+                        android:rowCount="2">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="　        スパイク         　"
+                            android:id="@+id/Spike"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="4"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="     打数      "
+                            android:id="@+id/Maru1"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="1"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="      得点      "
+                            android:id="@+id/Tokuten1"
+                            android:layout_row="1"
+                            android:layout_column="1"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="1"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="      失点     "
+                            android:id="@+id/Batu1"
+                            android:layout_row="1"
+                            android:layout_column="2"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="1"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="決定率"
+                            android:id="@+id/Ketteiritu1"
+                            android:layout_row="1"
+                            android:layout_column="3"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="1"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="   ブロック   "
+                            android:id="@+id/Block"
+                            android:layout_row="0"
+                            android:layout_column="0"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="2"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="         得点          "
+                            android:id="@+id/BlTokuten"
+                            android:layout_row="1"
+                            android:layout_column="0"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="1"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
 
 
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="   率    "
+                            android:id="@+id/Blritu"
+                            android:layout_row="1"
+                            android:layout_column="1"
+                            android:layout_rowSpan="1"
+                            android:layout_columnSpan="1"
+                            android:textSize="20dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
 
 
-            </TableRow>
+
+                    </GridLayout>
 
 
-    </TableLayout>
+                </TableRow>
+
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>

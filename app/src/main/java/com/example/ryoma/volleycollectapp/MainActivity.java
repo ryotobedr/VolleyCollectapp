@@ -112,6 +112,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button dataCollect = (Button) findViewById(R.id.dataCollect);
+        dataCollect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent dataIntent = new Intent(MainActivity.this,DataCollection.class);
+                startActivity(dataIntent);
+            }
+        });
+
 
     }
 
@@ -136,4 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

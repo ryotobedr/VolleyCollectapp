@@ -10,89 +10,120 @@
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
 
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="背番号入力"
-        android:id="@+id/UniformNumbertext"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/scrollView" >
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Number"
-        android:ems="10"
-        android:id="@+id/UniformNumberInput"
-        android:layout_below="@+id/UniformNumbertext"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="選手名入力"
-        android:id="@+id/PlayerNametext"
-        android:layout_below="@+id/UniformNumberInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="背番号入力"
+                android:id="@+id/UniformNumbertext"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Name"
-        android:ems="10"
-        android:id="@+id/PlayerNameInput"
-        android:layout_below="@+id/PlayerNametext"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Number"
+                android:ems="10"
+                android:id="@+id/UniformNumberInput"
+                android:layout_below="@+id/UniformNumbertext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="登録"
-        android:id="@+id/Touroku"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/PlayerNameInput" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="選手名入力"
+                android:id="@+id/PlayerNametext"
+                android:layout_below="@+id/UniformNumberInput"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="更新"
-        android:id="@+id/Update"
-        android:layout_alignTop="@+id/Touroku"
-        android:layout_alignEnd="@+id/PlayerNameInput" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Name"
+                android:ems="10"
+                android:id="@+id/PlayerNameInput"
+                android:layout_below="@+id/PlayerNametext"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="42dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="削除"
-        android:id="@+id/Delete"
-        android:layout_below="@+id/Touroku"
-        android:layout_alignEnd="@+id/Touroku" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="すべて削除"
-        android:id="@+id/AllDelete"
-        android:layout_alignTop="@+id/Delete"
-        android:layout_alignStart="@+id/Update" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登録"
+                    android:id="@+id/Touroku"
+                    android:layout_centerVertical="true"
+                    android:layout_alignStart="@+id/PlayerNameInput"
+                    android:layout_column="5" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="選手一覧表示"
-        android:id="@+id/ShowDatabaseButton"
-        android:layout_below="@+id/Delete"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新"
+                    android:id="@+id/Update"
+                    android:layout_alignTop="@+id/Touroku"
+                    android:layout_alignEnd="@+id/PlayerNameInput"
+                    android:layout_column="6" />
 
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="削除"
+                    android:id="@+id/Delete"
+                    android:layout_below="@+id/Touroku"
+                    android:layout_alignEnd="@+id/Touroku"
+                    android:layout_column="7" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="すべて削除"
+                    android:id="@+id/AllDelete"
+                    android:layout_alignTop="@+id/Delete"
+                    android:layout_alignStart="@+id/Update"
+                    android:layout_column="8" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="選手一覧表示"
+                    android:id="@+id/ShowDatabaseButton"
+                    android:layout_below="@+id/Delete"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="34dp"
+                    android:layout_column="5"
+                    android:layout_gravity="center_horizontal|bottom" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="データ記録表"
+                    android:id="@+id/dataCollect"
+                    android:layout_column="6" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
 </RelativeLayout>
