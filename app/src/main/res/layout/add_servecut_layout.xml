@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#000000" >
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" 背番号 "
+                android:id="@+id/UniformNumber3"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="center" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="     選手名     "
+                android:id="@+id/PlayerName3"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.25">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="+"
+                    android:textSize="25dp"
+                    android:id="@+id/AcutPlus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="-"
+                    android:textSize="25dp"
+                    android:id="@+id/AcutMinus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/AcutHonsuu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/AcutRitu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.25">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="+"
+                    android:textSize="25dp"
+                    android:id="@+id/BcutPlus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="-"
+                    android:textSize="25dp"
+                    android:id="@+id/BcutMinus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/BcutHonsuu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/BcutRitu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.25">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="+"
+                    android:textSize="25dp"
+                    android:id="@+id/CcutPlus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="-"
+                    android:textSize="25dp"
+                    android:id="@+id/CcutMinus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/CcutHonsuu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/CcutRitu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.25">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="+"
+                    android:textSize="25dp"
+                    android:id="@+id/DcutPlus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:text="-"
+                    android:textSize="25dp"
+                    android:id="@+id/DcutMinus"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/DcutHonsuu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textSize="25dp"
+                    android:id="@+id/DcutRitu"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginLeft="1.0dp"
+                    android:layout_marginRight="1.0dp"
+                    android:onClick="SpDasuu"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:textSize="25dp"
+                android:id="@+id/ServeCutHonsuu1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:onClick="SpDasuu"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </TableRow>
+
+</LinearLayout>

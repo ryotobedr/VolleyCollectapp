@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServeButtun"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="追加"
+            android:id="@+id/ServeAddPlayer"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="false" />
+
+        <EditText
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="背番号入力"
+            android:ems="10"
+            android:id="@+id/ServeNumberInput"
+            android:layout_weight="0.06" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="削除"
+            android:id="@+id/ServeDeletePlayer"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/addPlayer" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="選手登録"
+            android:id="@+id/ServePlayerTouroku" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Servespinner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="セット" />
+
+    </TableRow>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ServeButtun">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView4"
+            android:layout_alignParentEnd="false">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ServeData_Sheet">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.3"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" 背番号 "
+                            android:id="@+id/ServeUniformNumber"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.7"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="     選手名     "
+                            android:id="@+id/ServePlayerName"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.25"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" A "
+                            android:id="@+id/Acut"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.25"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" B "
+                            android:id="@+id/Bcut"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.25"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" C "
+                            android:id="@+id/Ccut"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.25"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" D "
+                            android:id="@+id/Dcut"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="0.25"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text=" 本数 "
+                            android:id="@+id/ServeCutHonsuu"
+                            android:textSize="25dp"
+                            android:background="#FFFFFF"
+                            android:layout_marginTop="0.5dp"
+                            android:layout_marginBottom="0.5dp"
+                            android:layout_marginLeft="1.0dp"
+                            android:layout_marginRight="1.0dp"
+                            android:layout_gravity="center_horizontal" />
+
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

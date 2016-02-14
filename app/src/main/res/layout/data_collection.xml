@@ -2,285 +2,760 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Buttun"
-        android:weightSum="1">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="追加"
-            android:id="@+id/addPlayer"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="false" />
-
-        <EditText
-            android:layout_width="78dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="背番号入力"
-            android:ems="10"
-            android:id="@+id/NumberInput"
-            android:layout_weight="0.06" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="削除"
-            android:id="@+id/deletePlayer"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/addPlayer" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="選手登録"
-            android:id="@+id/PlayerTouroku" />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="セット" />
-
-    </TableRow>
-
-    <LinearLayout
-        android:orientation="vertical"
+    <TabHost
+        android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/Buttun">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView3"
-            android:layout_alignParentEnd="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <TableLayout
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/data_sheet">
+                android:orientation="vertical">
 
-                <TableRow
+                <LinearLayout
+                    android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#000000" >
+                    android:orientation="vertical">
 
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Buttun"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="追加"
+                            android:id="@+id/addPlayer"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="false" />
+
+                        <EditText
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="背番号入力"
+                            android:ems="10"
+                            android:id="@+id/NumberInput"
+                            android:layout_weight="0.06" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="削除"
+                            android:id="@+id/deletePlayer"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@+id/addPlayer" />
+
+                        <EditText
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="背番号入力"
+                            android:ems="10"
+                            android:id="@+id/DeliteNumberInput"
+                            android:layout_weight="0.06" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="選手登録"
+                            android:id="@+id/PlayerTouroku" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="セット" />
+
+                    </TableRow>
 
                     <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/Buttun">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text=" 背番号 "
-                            android:id="@+id/UniformNumber"
-                            android:textSize="25dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center" />
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/scrollView3"
+                            android:layout_alignParentEnd="false">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="     選手名     "
-                            android:id="@+id/PlayerName"
-                            android:textSize="25dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center" />
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/data_sheet">
 
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#000000"
+                                    android:orientation="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.3"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 背番号 "
+                                            android:id="@+id/UniformNumber"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.7"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="     選手名     "
+                                            android:id="@+id/PlayerName"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                    </LinearLayout>
+
+                                    <GridLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:columnCount="4"
+                                        android:rowCount="2"
+                                        android:layout_weight="0.5"
+                                        android:orientation="horizontal"
+                                        android:id="@+id/SpikeGrid">
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="　          スパイク           　"
+                                            android:id="@+id/Spike"
+                                            android:layout_row="0"
+                                            android:layout_column="0"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="4"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="         打数          "
+                                            android:id="@+id/Maru1"
+                                            android:layout_row="1"
+                                            android:layout_column="0"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="1"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="          得点          "
+                                            android:id="@+id/Tokuten1"
+                                            android:layout_row="1"
+                                            android:layout_column="1"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="1"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="          失点         "
+                                            android:id="@+id/Batu1"
+                                            android:layout_row="1"
+                                            android:layout_column="2"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="1"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="決定率"
+                                            android:id="@+id/Ketteiritu1"
+                                            android:layout_row="1"
+                                            android:layout_column="3"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="1"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+
+                                    </GridLayout>
+
+                                    <GridLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:columnCount="2"
+                                        android:rowCount="2"
+                                        android:layout_weight="0.2">
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="   ブロック   "
+                                            android:id="@+id/Block"
+                                            android:layout_row="0"
+                                            android:layout_column="0"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="2"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="         得点          "
+                                            android:id="@+id/BlTokuten"
+                                            android:layout_row="1"
+                                            android:layout_column="0"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="1"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="   率    "
+                                            android:id="@+id/Blritu"
+                                            android:layout_row="1"
+                                            android:layout_column="1"
+                                            android:layout_rowSpan="1"
+                                            android:layout_columnSpan="1"
+                                            android:textSize="20dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                    </GridLayout>
+
+                                </TableRow>
+                            </TableLayout>
+                        </ScrollView>
                     </LinearLayout>
 
-                    <GridLayout
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ServeButtun"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="追加"
+                            android:id="@+id/ServeAddPlayer"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="false" />
+
+                        <EditText
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="背番号入力"
+                            android:ems="10"
+                            android:id="@+id/ServeNumberInput"
+                            android:layout_weight="0.06" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="削除"
+                            android:id="@+id/ServeDeletePlayer"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@+id/addPlayer" />
+
+                        <EditText
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="背番号入力"
+                            android:ems="10"
+                            android:id="@+id/ServeDeliteNumberInput"
+                            android:layout_weight="0.06" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="選手登録"
+                            android:id="@+id/ServePlayerTouroku" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/Servespinner" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="セット" />
+
+                    </TableRow>
+
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:columnCount="4"
-                        android:rowCount="2">
+                        android:layout_below="@+id/ServeButtun">
 
-                        <TextView
-                            android:layout_width="fill_parent"
+                        <ScrollView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="　        スパイク         　"
-                            android:id="@+id/Spike"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="4"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
+                            android:id="@+id/scrollView4"
+                            android:layout_alignParentEnd="false">
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/ServeData_Sheet">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#000000"
+                                    android:orientation="horizontal">
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.3"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 背番号 "
+                                            android:id="@+id/ServeUniformNumber"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.7"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="     選手名     "
+                                            android:id="@+id/ServePlayerName"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.7">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.30"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 得点 "
+                                            android:id="@+id/ServeTokuten"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.30"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 効果 "
+                                            android:id="@+id/ServeKouka"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.30"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 失点 "
+                                            android:id="@+id/ServeSitten"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.1"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 本数 "
+                                            android:id="@+id/ServeHonsuu"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                    </LinearLayout>
+                                </TableRow>
+                            </TableLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ServeCutButtun"
+                        android:weightSum="1">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="追加"
+                            android:id="@+id/ServeCutAddPlayer"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="false" />
+
+                        <EditText
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="背番号入力"
+                            android:ems="10"
+                            android:id="@+id/ServeCutNumberInput"
+                            android:layout_weight="0.06" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="削除"
+                            android:id="@+id/ServeCutDeletePlayer"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@+id/addPlayer" />
+
+                        <EditText
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="背番号入力"
+                            android:ems="10"
+                            android:id="@+id/ServeCutDeliteNumberInput"
+                            android:layout_weight="0.06" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="選手登録"
+                            android:id="@+id/ServeCutPlayerTouroku" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ServeCutspinner" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="     打数      "
-                            android:id="@+id/Maru1"
-                            android:layout_row="1"
-                            android:layout_column="0"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="1"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="セット" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="      得点      "
-                            android:id="@+id/Tokuten1"
-                            android:layout_row="1"
-                            android:layout_column="1"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="1"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
+                    </TableRow>
 
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="      失点     "
-                            android:id="@+id/Batu1"
-                            android:layout_row="1"
-                            android:layout_column="2"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="1"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="決定率"
-                            android:id="@+id/Ketteiritu1"
-                            android:layout_row="1"
-                            android:layout_column="3"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="1"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
-
-
-                    </GridLayout>
-
-                    <GridLayout
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:columnCount="2"
-                        android:rowCount="2">
+                        android:layout_below="@+id/ServeCutButtun">
 
-                        <TextView
-                            android:layout_width="fill_parent"
+                        <ScrollView
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="   ブロック   "
-                            android:id="@+id/Block"
-                            android:layout_row="0"
-                            android:layout_column="0"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="2"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
+                            android:id="@+id/scrollView5"
+                            android:layout_alignParentEnd="false">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="         得点          "
-                            android:id="@+id/BlTokuten"
-                            android:layout_row="1"
-                            android:layout_column="0"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="1"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/ServeCutData_Sheet">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#000000"
+                                    android:orientation="horizontal">
 
 
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.3"
+                                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="   率    "
-                            android:id="@+id/Blritu"
-                            android:layout_row="1"
-                            android:layout_column="1"
-                            android:layout_rowSpan="1"
-                            android:layout_columnSpan="1"
-                            android:textSize="20dp"
-                            android:background="#FFFFFF"
-                            android:layout_marginTop="0.5dp"
-                            android:layout_marginBottom="0.5dp"
-                            android:layout_marginLeft="1.0dp"
-                            android:layout_marginRight="1.0dp"
-                            android:layout_gravity="center_horizontal" />
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.3"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 背番号 "
+                                            android:id="@+id/ServeCutUniformNumber"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
 
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.7"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text="     選手名     "
+                                            android:id="@+id/ServeCutPlayerName"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
 
+                                    </LinearLayout>
 
-                    </GridLayout>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.6">
 
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.25"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" A "
+                                            android:id="@+id/Acut"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
 
-                </TableRow>
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.25"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" B "
+                                            android:id="@+id/Bcut"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
 
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.25"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" C "
+                                            android:id="@+id/Ccut"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
 
-            </TableLayout>
-        </ScrollView>
-    </LinearLayout>
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.25"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" D "
+                                            android:id="@+id/Dcut"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.1">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="55dp"
+                                            android:layout_weight="0.25"
+                                            android:textAppearance="?android:attr/textAppearanceMedium"
+                                            android:text=" 本数 "
+                                            android:id="@+id/ServeCutHonsuu"
+                                            android:textSize="25dp"
+                                            android:background="#FFFFFF"
+                                            android:layout_marginTop="0.5dp"
+                                            android:layout_marginBottom="0.5dp"
+                                            android:layout_marginLeft="1.0dp"
+                                            android:layout_marginRight="1.0dp"
+                                            android:layout_gravity="center_horizontal" />
+
+                                    </LinearLayout>
+
+                                </TableRow>
+                            </TableLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
 </LinearLayout>

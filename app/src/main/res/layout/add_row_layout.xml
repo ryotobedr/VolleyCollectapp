@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#000000" >
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" 背番号 "
+                android:id="@+id/UniformNumber1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="center" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="     選手名     "
+                android:id="@+id/PlayerName1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:columnCount="11"
+            android:rowCount="1">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="25dp"
+                android:id="@+id/SpDasuPlus"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textSize="25dp"
+                android:id="@+id/SpDasuMinus"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/SpikeDasu"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:onClick="SpDasuu"
+                android:layout_gravity="right|center_horizontal" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="25dp"
+                android:id="@+id/SpTokutenPlus"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textSize="25dp"
+                android:id="@+id/SpTokutebMinus"
+                android:layout_row="0"
+                android:layout_column="5"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/SpikeTokuten"
+                android:layout_row="0"
+                android:layout_column="6"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="right|center_horizontal"
+                android:onClick="SpTokuten" />
+
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="25dp"
+                android:id="@+id/SpSittenPlus"
+                android:layout_row="0"
+                android:layout_column="7"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textSize="25dp"
+                android:id="@+id/SpSittenMinus"
+                android:layout_row="0"
+                android:layout_column="8"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/SpikeSitten"
+                android:layout_row="0"
+                android:layout_column="9"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="right|center_horizontal"
+                android:onClick="SpSitten" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="%"
+                android:id="@+id/SpikeKetteiritu"
+                android:layout_row="0"
+                android:layout_column="10"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="right|center_horizontal"
+                android:onClick="Ketteiritu" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:columnCount="5"
+            android:rowCount="1" >
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="25dp"
+                android:id="@+id/BlDasuPlus"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textSize="25dp"
+                android:id="@+id/BlDasuMinus"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp" />
+
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/BlTokuten1"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="right|center_horizontal"
+                android:onClick="BlTokuten" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="%"
+                android:id="@+id/Blritu1"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_rowSpan="1"
+                android:layout_columnSpan="1"
+                android:textSize="25dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="1.0dp"
+                android:layout_marginRight="1.0dp"
+                android:layout_gravity="right|center_horizontal"
+                android:onClick="Blritu" />
+
+        </GridLayout>
+
+    </TableRow>
+
+</LinearLayout>
